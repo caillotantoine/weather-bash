@@ -2,8 +2,6 @@
 KEY=$1
 CITY=$2
 
-# KEY=dafe0381eb267c80de47385cecc60a8a
-
 # echo search $CITY - $KEY
 
 data=$(curl -s "https://api.openweathermap.org/geo/1.0/direct?q=$CITY&appid=$KEY")
