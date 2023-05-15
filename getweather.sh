@@ -73,13 +73,18 @@ if (( $wid >= 801 && $wid < 803 )); then
     # echo Cloud
     icon=􀇕
 fi
-if (( $wid >= 803 && $wid < 804 )); then
+if (( $wid >= 803 && $wid < 805 )); then
     # echo Cloud
     icon=􀇃
 fi
-if (( $wid >= 800 )); then
+if (( $wid == 800 )); then
     # echo Clear
     icon=􀆮
+fi
+
+if [ ! -z "$3" ]
+then
+	echo $data | jq '.'
 fi
 
 echo "$icon $wmain $(printf %.0f $wtemp)°C ($city - $country)"
